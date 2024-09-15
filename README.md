@@ -21,7 +21,7 @@ Minimalistic Python script to prompt a shell user for cities and print weather s
 1. Add your API key as an environment variable
 
    ```sh
-   export OPENWEATHER_API_SECRET={YOUR API KEY}
+   export OPENWEATHER_API_KEY={YOUR API KEY}
    ```
 
 1. Install dependencies
@@ -45,6 +45,8 @@ Minimalistic Python script to prompt a shell user for cities and print weather s
 1. Poetry: I went for Poetry over `pyenv`, `venv`, `virtualwrapper`, etc simply because I hadn't tried it yet and was curious.
 
 1. Async: For a larger project of this kind I would strongly consider async or some coroutine library, not only to parallelize fetch requests for muliple cities. As it is, this seemed the simplest way to the target.
+
+1. Env variables: Usually I'd put sensitive data into an `.env` file (and exclude that from VCS) or use the secret management of the cloud provider.
 
 1. Other bells and whistles: I considered adding custom exceptions, tests, a license, `.gitignore`, and a proper frontend but, again, decided for the MVP version.
 
